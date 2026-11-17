@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Escolar - CBTis 5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Biblioteca Escolar</h1>
+        <p class="subtitulo">CBTis 5 - Zacualtipán de Ángeles, Hidalgo</p>
+        <div class="integrantes">
+            <p><strong>Elaborado por:</strong></p>
+            <p>• Hernández Santos Liliana</p>
+            <p>• Acosta Hidalgo Yarethzy Amairani</p>
+            <p><strong>Grupo:</strong> 5EV</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#galeria">Fotografías</a></li>
+                <li><a href="#catalogo">Catálogo por Carreras</a></li>
+                <li><a href="#horarios">Horarios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio">
+            <h2>Bienvenida a la Biblioteca Escolar</h2>
+            <p>Portal digital de la biblioteca escolar del plantel, creado para facilitar la consulta del acervo bibliográfico especializado por carreras y el acceso a los servicios estudiantiles.</p>
+        </section>
+
+        <section id="galeria">
+            <h2>Fotografías de las Instalaciones</h2>
+            <div class="galeria-fotos">
+                <div class="tarjeta-foto">
+                    <img src="d:\MODULO 4\BIBLIOTECA CBTIS 5\WhatsApp Image 2026-11-12 at 5.12.47 PM.jpeg" alt="estanteria de libros">
+                    <p>estanteria de libros</p>
+                </div>
+                <div class="tarjeta-foto">
+                    <img src="d:\MODULO 4\BIBLIOTECA CBTIS 5\WhatsApp Image 2026-11-12 at 5.12.49 PM (1).jpeg" alt="mesa de actividades">
+                    <p>mesa de actividades</p>
+                </div>
+                <div class="tarjeta-foto">
+                    <img src="d:\MODULO 4\BIBLIOTECA CBTIS 5\WhatsApp Image 2026-11-12 at 5.12.49 PM.jpeg" alt="librero">
+                    <p>librero</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="catalogo">
+            <h2>Catálogo de Libros por Carreras</h2>
+            <p>Selecciona o busca el material bibliográfico correspondiente a tu especialidad:</p>
+            
+            <input type="text" id="buscador" placeholder="Buscar libro o tema..." onkeyup="filtrarLibros()">
+
+            <div class="carreras-container" id="listaLibros">
+                
+                <div class="seccion-carrera">
+                    <h3>Programación / Informática</h3>
+                    <ul>
+                        <li>Fundamentos de Programación - Joyanes</li>
+                        <li>Estructura de Datos en Java - Luis Joyanes</li>
+                        <li>Redes de Computadoras - Andrew S. Tanenbaum</li>
+                    </ul>
+                </div>
+
+                <div class="seccion-carrera">
+                    <h3>Contabilidad </h3>
+                    <ul>
+                        <li>Contabilidad I - Guajardo Cantú</li>
+                        <li>Administración de Empresas - Idalberto Chiavenato</li>
+                        <li>Derecho Mercantil Mexicano - Mantilla Molina</li>
+                    </ul>
+                </div>
+
+                <div class="seccion-carrera">
+                    <h3>Laboratorista / Enfermería</h3>
+                    <ul>
+                        <li>Biología Celular y Molecular - Lodish</li>
+                        <li>Química Clínica: Técnicas y Interpretación - Henry</li>
+                        <li>Anatomía y Fisiología Humana - Tortora</li>
+                    </ul>
+                </div>
+
+                <div class="seccion-carrera">
+                    <h3>Tronco Común / Cultura General</h3>
+                    <ul>
+                        <li>Cien años de soledad - Gabriel García Márquez</li>
+                        <li>Matemáticas Simplificadas - CONAMAT</li>
+                        <li>Química General - Chang</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="horarios">
+            <h2>Horarios de Atención y Reglas</h2>
+            <p><strong>Horario:</strong> Lunes a Viernes de 8:00 AM a 4:00 PM</p>
+            <h3>Requisitos para préstamo:</h3>
+            <ul>
+                <li>Credencial escolar vigente del plantel.</li>
+                <li>Llenar la ficha de solicitud en biblioteca.</li>
+                <li>Mantener en buen estado el material prestado.</li>
+            </ul>
+        </section>
+
+        <section id="contacto">
+            <h2>Formulario de Contacto</h2>
+            <form onsubmit="enviarFormulario(event)">
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" placeholder="Ingresa tu nombre" required>
+                
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" placeholder="ejemplo@correo.com" required>
+                
+                <label for="mensaje">Mensaje o duda:</label>
+                <textarea id="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                
+                <button type="submit">Enviar Solicitud</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Biblioteca Escolar | Hernández Santos Liliana & Acosta Hidalgo Yarethzy Amairani | Grupo 5EV</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
